@@ -96,17 +96,15 @@
 
 
 
-  <meta name="description" content="tags:-JAVA-Leetcode-python">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+  <meta name="keywords" content="JAVA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring Boot学习总结">
+<meta property="og:url" content="http://yoursite.com/2019/05/10/浅谈springboot框架/index.html">
 <meta property="og:site_name" content="wind">
-<meta property="og:description" content="tags:-JAVA-Leetcode-python">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-09T06:37:08.743Z">
+<meta property="og:updated_time" content="2019-05-10T05:03:46.553Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="tags:-JAVA-Leetcode-python">
+<meta name="twitter:title" content="Spring Boot学习总结">
 
 
 
@@ -114,7 +112,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/tags/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/10/浅谈springboot框架/">
 
 
 
@@ -124,7 +122,7 @@
   };
 </script>
 
-  <title>tags | wind</title>
+  <title>Spring Boot学习总结 | wind</title>
   
 
 
@@ -248,7 +246,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -304,28 +302,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -352,64 +328,183 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/10/浅谈springboot框架/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wind">
+      <meta itemprop="description" content="路虽远，不行则不至">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wind">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">tags
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
+          <h1 class="post-title" itemprop="name headline">Spring Boot学习总结
+
               
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-              2 tags in total
-            </div>
-            <div class="tag-cloud-tags">
-              
-                <a href="/tags/JAVA/" style="font-size: 12px; color: #ccc">JAVA</a> <a href="/tags/Leetcode/" style="font-size: 12px; color: #ccc">Leetcode</a>
-              
-            </div>
-          </div>
+            
+          </h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-05-10 11:43:41 / Modified: 13:03:46" itemprop="dateCreated datePublished" datetime="2019-05-10T11:43:41+08:00">2019-05-10</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <hr>
+<a id="more"></a>
+<h2 id="基本的问题点"><a href="#基本的问题点" class="headerlink" title="基本的问题点"></a>基本的问题点</h2><h3 id="关于Spring-Boot是什么，能做什么，如何使用"><a href="#关于Spring-Boot是什么，能做什么，如何使用" class="headerlink" title="关于Spring Boot是什么，能做什么，如何使用"></a>关于Spring Boot是什么，能做什么，如何使用</h3><p>  Spring Boot 其实不是什么新的框架，而是对很多框架进行了整合，可以用于快速的搭建web工程。<br>  传统的web工程搭建在配置文件，部署工程等方面花费很多的时间，Spring Boot使得我们的web工程配置、部署、监控变得简单。<br>  通常可以使用构建工具快速的构建Spring Boot工程，可以到官网<a href="https://start.spring.io/" target="_blank" rel="noopener">https://start.spring.io/</a> generate一个project 里面有很多可选的模块。</p>
+
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JAVA/" rel="tag"># JAVA</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/10/leetcode题解/" rel="next" title="leetcode题解">
+                <i class="fa fa-chevron-left"></i> leetcode题解
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -438,8 +533,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -562,6 +666,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本的问题点"><span class="nav-number">1.</span> <span class="nav-text">基本的问题点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于Spring-Boot是什么，能做什么，如何使用"><span class="nav-number">1.1.</span> <span class="nav-text">关于Spring Boot是什么，能做什么，如何使用</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

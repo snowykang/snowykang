@@ -96,18 +96,15 @@
 
 
 
-  <meta name="description" content="基本的问题点">
-<meta name="keywords" content="JAVA">
+  <meta name="keywords" content="Leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spring Boot">
-<meta property="og:url" content="http://yoursite.com/2019/05/09/浅谈springboot框架/index.html">
+<meta property="og:title" content="leetcode题解">
+<meta property="og:url" content="http://yoursite.com/2019/05/10/leetcode题解/index.html">
 <meta property="og:site_name" content="wind">
-<meta property="og:description" content="基本的问题点">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-09T10:07:10.799Z">
+<meta property="og:updated_time" content="2019-05-10T08:28:49.206Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spring Boot">
-<meta name="twitter:description" content="基本的问题点">
+<meta name="twitter:title" content="leetcode题解">
 
 
 
@@ -115,7 +112,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/05/09/浅谈springboot框架/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/10/leetcode题解/">
 
 
 
@@ -125,7 +122,7 @@
   };
 </script>
 
-  <title>Spring Boot | wind</title>
+  <title>leetcode题解 | wind</title>
   
 
 
@@ -345,11 +342,11 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/09/浅谈springboot框架/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/10/leetcode题解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wind">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="路虽远，不行则不至">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -362,7 +359,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Spring Boot
+          <h1 class="post-title" itemprop="name headline">leetcode题解
 
               
             
@@ -388,7 +385,7 @@
                 
               
 
-              <time title="Created: 2019-05-09 15:43:41 / Modified: 18:07:10" itemprop="dateCreated datePublished" datetime="2019-05-09T15:43:41+08:00">2019-05-09</time>
+              <time title="Created: 2019-05-10 09:13:00 / Modified: 16:28:49" itemprop="dateCreated datePublished" datetime="2019-05-10T09:13:00+08:00">2019-05-10</time>
             
 
             
@@ -410,7 +407,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Leetcode/" itemprop="url" rel="index"><span itemprop="name">Leetcode</span></a></span>
 
                 
                 
@@ -445,8 +442,21 @@
       
 
       
-        <h1 id="基本的问题点"><a href="#基本的问题点" class="headerlink" title="基本的问题点"></a>基本的问题点</h1><a id="more"></a>
-<h2 id="关于Spring-Boot是什么，能做什么，如何使用"><a href="#关于Spring-Boot是什么，能做什么，如何使用" class="headerlink" title="关于Spring Boot是什么，能做什么，如何使用"></a>关于Spring Boot是什么，能做什么，如何使用</h2><p>  Spring Boot 其实不是什么新的框架，而是对很多框架进行了整合，可以用于快速的搭建web工程。<br>  传统的web工程搭建在配置文件，部署工程等方面花费很多的时间，Spring Boot使得我们的web工程配置、部署、监控变得简单。<br>  通常可以使用构建工具快速的构建Spring Boot工程，可以到官网<a href="https://start.spring.io/" target="_blank" rel="noopener">https://start.spring.io/</a> generate一个project 里面有很多可选的模块。</p>
+        <hr>
+<a id="more"></a>
+<p>为什么要做题呢？其实做题只是为了让你保持一种编程的状态，保持一种每天解决问题的习  惯，因为编程其实就是解决实际问题的过程啦。每天一点点，其实不会花费太多的时间啊，以下我将分类记下一些leetcode的题解。因为有很多这样的博客了，而且也分类写的很好了，我想做的只是记录一下我的历程啦，在其中也参照了很多他人的博客，分类是参考某博客的分类。</p>
+<hr>
+<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h3><p>常用的解题方法</p>
+<blockquote>
+<ul>
+<li>遍历链表</li>
+<li>利用递归的思想，如反转链表</li>
+<li>双指针：快慢指针</li>
+</ul>
+</blockquote>
+<h4 id="Remove-Duplicates-from-Sorted-List"><a href="#Remove-Duplicates-from-Sorted-List" class="headerlink" title="Remove Duplicates from Sorted List"></a><a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list" target="_blank" rel="noopener">Remove Duplicates from Sorted List</a></h4><p>思路：遍历链表，在遍历时判断当前结点的值与后面结点的值是否相等，时间复杂度O(n)。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteDuplicates</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        ListNode cur=head; <span class="comment">//cur为遍历指针</span></span><br><span class="line">        <span class="keyword">while</span>(cur!=<span class="keyword">null</span>&amp;&amp;cur.next!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(cur.val==cur.next.val)&#123;</span><br><span class="line">                cur.next=curt.next.next;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                cur=cur.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Remove-Duplicates-from-Sorted-List-II"><a href="#Remove-Duplicates-from-Sorted-List-II" class="headerlink" title="Remove Duplicates from Sorted List II"></a><a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/" target="_blank" rel="noopener">Remove Duplicates from Sorted List II</a></h4><p>思路：采用双指针，一个指针指向需要保留的结点，一个指针对有重复值的结点进行查找。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteDuplicates</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(head==<span class="keyword">null</span>) <span class="keyword">return</span> head;</span><br><span class="line">    ListNode dummy = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">    dummy.next=head; <span class="comment">//创建一个虚的头结点，方便后续的操作判断</span></span><br><span class="line">    ListNode pre = dummy,cur = head;<span class="comment">//双指针，pre指向需要保留的结点，cur为查重指针</span></span><br><span class="line">    <span class="keyword">while</span>(cur!=<span class="keyword">null</span>)&#123;</span><br><span class="line">        <span class="keyword">while</span> (cur.next!=<span class="keyword">null</span>&amp;&amp;cur.val==cur.next.val)&#123; <span class="comment">//如果出现相等的结点，就把当前指针指到相等结点的最后一个,注意：并没有删除结点</span></span><br><span class="line">            cur=cur.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(pre.next==cur) &#123;  <span class="comment">//说明这是一个有唯一值的结点，cur指针还没有动过呢</span></span><br><span class="line">            pre=pre.next;</span><br><span class="line">        &#125; <span class="keyword">else</span>&#123;    <span class="comment">//如果有一堆相等的结点，那就进行批量的删除</span></span><br><span class="line">            pre.next=cur.next; <span class="comment">//这边pre指针没有动过哦，只是修改它指向的下一个的结点</span></span><br><span class="line">        &#125;</span><br><span class="line">        cur=cur.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dummy.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -470,7 +480,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JAVA/" rel="tag"># JAVA</a>
+            <a href="/tags/Leetcode/" rel="tag"># Leetcode</a>
           
         </div>
       
@@ -479,6 +489,22 @@
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/10/浅谈springboot框架/" rel="prev" title="Spring Boot学习总结">
+                Spring Boot学习总结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -536,7 +562,7 @@
               <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="wind">
             
               <p class="site-author-name" itemprop="name">wind</p>
-              <div class="site-description motion-element" itemprop="description"></div>
+              <div class="site-description motion-element" itemprop="description">路虽远，不行则不至</div>
           </div>
 
           
@@ -546,7 +572,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -565,7 +591,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -584,7 +612,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -659,7 +689,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本的问题点"><span class="nav-number">1.</span> <span class="nav-text">基本的问题点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于Spring-Boot是什么，能做什么，如何使用"><span class="nav-number">1.1.</span> <span class="nav-text">关于Spring Boot是什么，能做什么，如何使用</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据结构"><span class="nav-number">1.</span> <span class="nav-text">数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#LinkedList"><span class="nav-number">1.1.</span> <span class="nav-text">LinkedList</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Remove-Duplicates-from-Sorted-List"><span class="nav-number">1.1.1.</span> <span class="nav-text">Remove Duplicates from Sorted List</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Remove-Duplicates-from-Sorted-List-II"><span class="nav-number">1.1.2.</span> <span class="nav-text">Remove Duplicates from Sorted List II</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
