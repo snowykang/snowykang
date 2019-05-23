@@ -96,16 +96,15 @@
 
 
 
-  <meta name="description" content="路虽远，不行则不至">
-<meta property="og:type" content="website">
-<meta property="og:title" content="wind">
-<meta property="og:url" content="http://yoursite.com/categories/Leetcode/index.html">
+  <meta name="keywords" content="SpringSecurity">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringSecurity">
+<meta property="og:url" content="http://yoursite.com/2019/05/22/SpringSecurity/index.html">
 <meta property="og:site_name" content="wind">
-<meta property="og:description" content="路虽远，不行则不至">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-05-23T01:04:27.893Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="wind">
-<meta name="twitter:description" content="路虽远，不行则不至">
+<meta name="twitter:title" content="SpringSecurity">
 
 
 
@@ -113,7 +112,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/categories/Leetcode/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/22/SpringSecurity/">
 
 
 
@@ -123,7 +122,7 @@
   };
 </script>
 
-  <title>Category: Leetcode | wind</title>
+  <title>SpringSecurity | wind</title>
   
 
 
@@ -171,7 +170,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -264,7 +263,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -303,28 +302,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -349,57 +326,189 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Leetcode<small>Category</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/22/SpringSecurity/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wind">
+      <meta itemprop="description" content="路虽远，不行则不至">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wind">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/05/10/leetcode题解/" itemprop="url">
-            
-              <span itemprop="name">leetcode题解</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">SpringSecurity
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-10T09:13:00+08:00" content="2019-05-10">
-          05-10
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-05-22 09:33:00" itemprop="dateCreated datePublished" datetime="2019-05-22T09:33:00+08:00">2019-05-22</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-05-23 09:04:27" itemprop="dateModified" datetime="2019-05-23T09:04:27+08:00">2019-05-23</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<a id="more"></a>
+<h2 id="SpringSecurity的架构"><a href="#SpringSecurity的架构" class="headerlink" title="SpringSecurity的架构"></a>SpringSecurity的架构</h2><p>这篇文档提供了对于安全框架构建和设计的理解。只包含一些基础的内容，但是通过这些基本的知识的了解，我们可以理清关于SpringScurity的一些疑惑。我们通过springSecirity在Web应用上面的应用，主要是通过filters(过滤器)的方式，更简单的说是通过使用方法注解的方式实现安全控制。当你需要在高层知道SpringSecurity是如何工作的，你可以阅读此文档。这篇文档只提供了最基础的。可以在整个SpringBoot架构当中进行理解，这些基本的原理也在没有使用SpringBoot框架时同样也适用。</p>
+<h2 id="Authentication-and-Access-Control（认证和登录控制）"><a href="#Authentication-and-Access-Control（认证和登录控制）" class="headerlink" title="Authentication and Access Control（认证和登录控制）"></a>Authentication and Access Control（认证和登录控制）</h2><p>authentication:(认证):你是谁？ authorization:你被允许做什么，有哪些权限？<br>SpringSecurity将认证和授权分开，并且通过自己的策略扩展了这两个方面。认证的策略接口：AuthenticationManager:只有一个方法 authenticate(),通过该方法可<br>以做三件事情：1、返回Authentication的一个对象（如果输入通过验证）2.抛出<br>AuthenticationException(如果输入没有通过验证) 3.返回null(如果判断不出是否通过验证)。AuthenticationException 是个运行时异常，它通常会被应用按照一般的方法解决，取决于应用的风格或者应用的目的。换句话来说，我们写的代码通常不被期望捕捉和处理这个异常。举个例子来说：一个WebUI会产生一个页面说明一个认证失败，后端的Http服务会响应一个401给前台，取决于上下文环境产生或者不产生一个WWW-Authentication头部。AuthenticationManager接口最常用的实现类时ProviderManager(代表了一系列的AuthenticationProvider实例)（认证提供者实例）。AuthenticationProvider和AuthenticationManager的不同点：多处一个可供调用者查询是否支持一个给出的Authentication类型：boolean supprots(class&lt;?&gt; authentication); 传入参数的类型其实是：Authentication类型，当前面的authenticate()方法当中支持的类型，此方法才会被条用。如果遇上不识别的类型，它将会被跳过。通常每个应用都有一组逻辑保护资源。每一组都有一个认证管理者代表。</p>
+<h2 id="定制认证管理者"><a href="#定制认证管理者" class="headerlink" title="定制认证管理者"></a>定制认证管理者</h2>
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/SpringSecurity/" rel="tag"># SpringSecurity</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/15/SpringMvc文档解读/" rel="next" title="SpringMvc文档解读">
+                <i class="fa fa-chevron-left"></i> SpringMvc文档解读
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -419,8 +528,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -545,6 +663,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SpringSecurity的架构"><span class="nav-number">1.</span> <span class="nav-text">SpringSecurity的架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Authentication-and-Access-Control（认证和登录控制）"><span class="nav-number">2.</span> <span class="nav-text">Authentication and Access Control（认证和登录控制）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定制认证管理者"><span class="nav-number">3.</span> <span class="nav-text">定制认证管理者</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -674,6 +809,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
 
   
 
@@ -689,6 +828,8 @@
 
   
 
+
+  
 
 
   
