@@ -96,16 +96,15 @@
 
 
 
-  <meta name="description" content="路虽远，不行则不至">
-<meta property="og:type" content="website">
-<meta property="og:title" content="wind">
-<meta property="og:url" content="http://yoursite.com/tags/Leetcode/index.html">
+  <meta name="keywords" content="JavaWeb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一个Servlet是如何被Tomcat服务器调用的">
+<meta property="og:url" content="http://yoursite.com/2019/05/27/一个HTTP请求之旅/index.html">
 <meta property="og:site_name" content="wind">
-<meta property="og:description" content="路虽远，不行则不至">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-05-27T09:27:11.556Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="wind">
-<meta name="twitter:description" content="路虽远，不行则不至">
+<meta name="twitter:title" content="一个Servlet是如何被Tomcat服务器调用的">
 
 
 
@@ -113,7 +112,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/tags/Leetcode/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/27/一个HTTP请求之旅/">
 
 
 
@@ -123,7 +122,7 @@
   };
 </script>
 
-  <title>Tag: Leetcode | wind</title>
+  <title>一个Servlet是如何被Tomcat服务器调用的 | wind</title>
   
 
 
@@ -171,7 +170,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -247,7 +246,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -323,83 +322,204 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Leetcode<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/27/一个HTTP请求之旅/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wind">
+      <meta itemprop="description" content="路虽远，不行则不至">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wind">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/05/10/leetcode题解/" itemprop="url">
-            
-              <span itemprop="name">leetcode题解</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">一个Servlet是如何被Tomcat服务器调用的
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-10T09:13:00+08:00" content="2019-05-10">
-          05-10
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-05-27 16:47:40 / Modified: 17:27:11" itemprop="dateCreated datePublished" datetime="2019-05-27T16:47:40+08:00">2019-05-27</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaWeb/" itemprop="url" rel="index"><span itemprop="name">JavaWeb</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<a id="more"></a>
+<p>如何快速的了解一个陌生的事物呢？我想要先从整体下手，不然往往会遇到只见树木不见<br>森林的情况，容易迷失在众多的细节当中而找不到出路。这篇文章将对Tomcat容器下一个Servlet的执行流程进行简单的归纳。</p>
+<h4 id="关于Tomcat服务器"><a href="#关于Tomcat服务器" class="headerlink" title="关于Tomcat服务器"></a>关于Tomcat服务器</h4><p>Tomcat是Apache旗下的一款servlet容器，可以调用java的代码并执行，我们将项目部署在<br>Tomcat中的webapps目录下，servlet制定并且实现了自己的一套规范以供Tomcat容器调用。<br>在每个项目当中都有一个web.xml配置文件文件中配置访问的路径和端口。web.xml当中设置<br>servlet访问路径（包括映射路径url-pattern,全类名）</p>
+<h4 id="Tomcat调用servlet的流程"><a href="#Tomcat调用servlet的流程" class="headerlink" title="Tomcat调用servlet的流程"></a>Tomcat调用servlet的流程</h4><p>Tomcat启动后将配置文件web.xml加载进内存，被动等待浏览器的请求，客户端发送http请求，Tomcat根据路径加载并创建servlet实例进行执行，并将数据通过http响应回传给客户端。</p>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaWeb/" rel="tag"># JavaWeb</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/22/SpringSecurity/" rel="next" title="SpringSecurity">
+                <i class="fa fa-chevron-left"></i> SpringSecurity
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/28/SpringBoot学习篇/" rel="prev" title="SpringBoot学习篇">
+                SpringBoot学习篇 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -419,8 +539,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -554,6 +683,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#关于Tomcat服务器"><span class="nav-number">1.</span> <span class="nav-text">关于Tomcat服务器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Tomcat调用servlet的流程"><span class="nav-number">2.</span> <span class="nav-text">Tomcat调用servlet的流程</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -683,6 +829,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
 
   
 
@@ -698,6 +848,8 @@
 
   
 
+
+  
 
 
   
