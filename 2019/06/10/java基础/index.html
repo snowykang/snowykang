@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="QIN">
 <meta property="og:description" content="经济基础决定上层建筑，打好基础，我们才能走得更远。以下是JAVA基础知识的总结，从概念的层面进行了讲述。我们为什么常常会觉得难呢？有很多时候是因为我们不解其意，一些专业的术语加深了我们理解的难度。理解了，才能记忆得更多。有一种方法可以检测我们是否正真的理解，那就是向别人讲述，这也就是费曼学习法。还有你应该经常巩固，去复习，找到适合自己的学习方法，制定合理的目标。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-26T06:49:52.801Z">
+<meta property="og:updated_time" content="2019-06-26T09:30:18.826Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java基础知识总结">
 <meta name="twitter:description" content="经济基础决定上层建筑，打好基础，我们才能走得更远。以下是JAVA基础知识的总结，从概念的层面进行了讲述。我们为什么常常会觉得难呢？有很多时候是因为我们不解其意，一些专业的术语加深了我们理解的难度。理解了，才能记忆得更多。有一种方法可以检测我们是否正真的理解，那就是向别人讲述，这也就是费曼学习法。还有你应该经常巩固，去复习，找到适合自己的学习方法，制定合理的目标。">
@@ -181,8 +181,11 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>经济基础决定上层建筑，打好基础，我们才能走得更远。以下是JAVA基础知识的总结，从概念的层面进行了讲述。我们为什么常常会觉得难呢？有很多时候是因为我们不解其意，一些专业的术语加深了我们理解的难度。理解了，才能记忆得更多。有一种方法可以检测我们是否正真的理解，那就是向别人讲述，这也就是费曼学习法。还有你应该经常巩固，去复习，找到适合自己的学习方法，制定合理的目标。<br><a id="more"></a></p>
-<h2 id="异常分裂及处理"><a href="#异常分裂及处理" class="headerlink" title="异常分裂及处理"></a>异常分裂及处理</h2><p>什么是异常？异常的分类？异常处理的方式？java类在异常处理当中的设计理念？<br><code>异常</code>：异常就是程序当中发生一些故障阻碍程序继续执行下去。对于一些可捕获的异常就需要进行处理或者抛出。<br><code>异常的分类</code>：编译时异常、运行时异常<br><code>异常的处理方式</code>： try..catch..进行捕获然后进行处理，throw 抛出异常交由上级处理，throws:<br><code>API当中异常的设计理念</code>：</p>
-<h2 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a>网络编程</h2><h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><ul>
+<h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><blockquote>
+<ul>
+<li></li>
+</ul>
+<ul>
 <li><strong>并发编程的优缺点</strong><ul>
 <li>优点：提高cpu的利用率，提高程序的业务执行。</li>
 <li>缺点：频繁的上下文切换。</li>
@@ -195,15 +198,17 @@
 </ul>
 </li>
 </ul>
-<h2 id="IO-NIO"><a href="#IO-NIO" class="headerlink" title="IO/NIO"></a>IO/NIO</h2><ul>
-<li><strong>七月旅行准备</strong><ul>
-<li>准备邮轮上需要携带的物品</li>
-<li>浏览日本免税店的物品</li>
-<li>购买蓝宝石公主号七月一日的船票</li>
+</blockquote>
+<h2 id="异常分裂及处理"><a href="#异常分裂及处理" class="headerlink" title="异常分裂及处理"></a>异常分裂及处理</h2><h2 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a>网络编程</h2><h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><h2 id="IO-NIO"><a href="#IO-NIO" class="headerlink" title="IO/NIO"></a>IO/NIO</h2><ul>
+<li><strong>IO模型</strong><ul>
+<li>阻塞模型：用户线程通用调用方法读取数据，如果获取不到数据，则整个用户线程都被阻塞掉，直到获取到数据。</li>
+<li>非阻塞模型：获取不到数据时，用户线程不会被阻塞掉，而是会不断的询问数据是否达到，占用CPU资源。</li>
+<li>多路IO复用模型 ：</li>
+<li>信号驱动模型 ：</li>
+<li>异步IO模型：</li>
 </ul>
 </li>
 </ul>
-<h3 id="IO模型"><a href="#IO模型" class="headerlink" title="IO模型"></a>IO模型</h3><p><code>阻塞模型</code>：用户线程通用调用方法读取数据，如果获取不到数据，则整个用户线程都被阻塞掉，直到获取到数据。<br><code>非阻塞模型</code>：获取不到数据时，用户线程不会被阻塞掉，而是会不断的询问数据是否达到，占用CPU资源。<br><code>多路IO复用模型</code>：<br><code>信号驱动模型</code>：<br><code>异步IO模型</code>：</p>
 <h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><blockquote>
 <ul>
 <li>整理知识，学习笔记</li>
@@ -339,7 +344,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#异常分裂及处理"><span class="toc-number">1.</span> <span class="toc-text">异常分裂及处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络编程"><span class="toc-number">2.</span> <span class="toc-text">网络编程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#集合"><span class="toc-number">3.</span> <span class="toc-text">集合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多线程"><span class="toc-number">4.</span> <span class="toc-text">多线程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IO-NIO"><span class="toc-number">5.</span> <span class="toc-text">IO/NIO</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#IO模型"><span class="toc-number">5.1.</span> <span class="toc-text">IO模型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注解"><span class="toc-number">6.</span> <span class="toc-text">注解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#反射"><span class="toc-number">7.</span> <span class="toc-text">反射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#泛型"><span class="toc-number">8.</span> <span class="toc-text">泛型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#序列化"><span class="toc-number">9.</span> <span class="toc-text">序列化</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#多线程"><span class="toc-number">1.</span> <span class="toc-text">多线程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异常分裂及处理"><span class="toc-number">2.</span> <span class="toc-text">异常分裂及处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络编程"><span class="toc-number">3.</span> <span class="toc-text">网络编程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#集合"><span class="toc-number">4.</span> <span class="toc-text">集合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IO-NIO"><span class="toc-number">5.</span> <span class="toc-text">IO/NIO</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注解"><span class="toc-number">6.</span> <span class="toc-text">注解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#反射"><span class="toc-number">7.</span> <span class="toc-text">反射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#泛型"><span class="toc-number">8.</span> <span class="toc-text">泛型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#序列化"><span class="toc-number">9.</span> <span class="toc-text">序列化</span></a></li></ol>
                     </div>
                 </span>
             </div>
