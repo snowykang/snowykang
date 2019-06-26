@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="QIN">
 <meta property="og:description" content="经济基础决定上层建筑，打好基础，我们才能走得更远。以下是JAVA基础知识的总结，从概念的层面进行了讲述。我们为什么常常会觉得难呢？有很多时候是因为我们不解其意，一些专业的术语加深了我们理解的难度。理解了，才能记忆得更多。有一种方法可以检测我们是否正真的理解，那就是向别人讲述，这也就是费曼学习法。还有你应该经常巩固，去复习，找到适合自己的学习方法，制定合理的目标。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-26T04:00:46.161Z">
+<meta property="og:updated_time" content="2019-06-26T06:49:52.801Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java基础知识总结">
 <meta name="twitter:description" content="经济基础决定上层建筑，打好基础，我们才能走得更远。以下是JAVA基础知识的总结，从概念的层面进行了讲述。我们为什么常常会觉得难呢？有很多时候是因为我们不解其意，一些专业的术语加深了我们理解的难度。理解了，才能记忆得更多。有一种方法可以检测我们是否正真的理解，那就是向别人讲述，这也就是费曼学习法。还有你应该经常巩固，去复习，找到适合自己的学习方法，制定合理的目标。">
@@ -182,35 +182,37 @@
       
         <p>经济基础决定上层建筑，打好基础，我们才能走得更远。以下是JAVA基础知识的总结，从概念的层面进行了讲述。我们为什么常常会觉得难呢？有很多时候是因为我们不解其意，一些专业的术语加深了我们理解的难度。理解了，才能记忆得更多。有一种方法可以检测我们是否正真的理解，那就是向别人讲述，这也就是费曼学习法。还有你应该经常巩固，去复习，找到适合自己的学习方法，制定合理的目标。<br><a id="more"></a></p>
 <h2 id="异常分裂及处理"><a href="#异常分裂及处理" class="headerlink" title="异常分裂及处理"></a>异常分裂及处理</h2><p>什么是异常？异常的分类？异常处理的方式？java类在异常处理当中的设计理念？<br><code>异常</code>：异常就是程序当中发生一些故障阻碍程序继续执行下去。对于一些可捕获的异常就需要进行处理或者抛出。<br><code>异常的分类</code>：编译时异常、运行时异常<br><code>异常的处理方式</code>： try..catch..进行捕获然后进行处理，throw 抛出异常交由上级处理，throws:<br><code>API当中异常的设计理念</code>：</p>
-<h2 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a>网络编程</h2><h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><table>
-<thead>
-<tr>
-<th>知识点总结</th>
-<th style="text-align:right"></th>
-<th style="text-align:center"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>并发编程的优缺点</td>
-<td style="text-align:right">基本的概念</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td>手机</td>
-<td style="text-align:right">\$12</td>
-<td style="text-align:center">12</td>
-</tr>
-<tr>
-<td>管线</td>
-<td style="text-align:right">\$1</td>
-<td style="text-align:center">234</td>
-</tr>
-</tbody>
-</table>
-<h2 id="IO-NIO"><a href="#IO-NIO" class="headerlink" title="IO/NIO"></a>IO/NIO</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: Start</span><br><span class="line">i=&gt;inputoutput: 输入年份n</span><br><span class="line">cond1=&gt;condition: n能否被4整除？</span><br><span class="line">cond2=&gt;condition: n能否被100整除？</span><br><span class="line">cond3=&gt;condition: n能否被400整除？</span><br><span class="line">o1=&gt;inputoutput: 输出非闰年</span><br><span class="line">o2=&gt;inputoutput: 输出非闰年</span><br><span class="line">o3=&gt;inputoutput: 输出闰年</span><br><span class="line">o4=&gt;inputoutput: 输出闰年</span><br><span class="line">e=&gt;end</span><br><span class="line">st-&gt;i-&gt;cond1</span><br><span class="line">cond1(no)-&gt;o1-&gt;e</span><br><span class="line">cond1(yes)-&gt;cond2</span><br><span class="line">cond2(no)-&gt;o3-&gt;e</span><br><span class="line">cond2(yes)-&gt;cond3</span><br><span class="line">cond3(yes)-&gt;o2-&gt;e</span><br><span class="line">cond3(no)-&gt;o4-&gt;e</span><br></pre></td></tr></table></figure>
+<h2 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a>网络编程</h2><h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><ul>
+<li><strong>并发编程的优缺点</strong><ul>
+<li>优点：提高cpu的利用率，提高程序的业务执行。</li>
+<li>缺点：频繁的上下文切换。</li>
+<li>一些基本概念：进程、线程、程序、同步、异步，阻塞，非阻塞、并发、并行、脏读（数据可见性）。</li>
+</ul>
+</li>
+<li><strong>线程的状态和转换 </strong><ul>
+<li>创建（Thread、Runnable、Collable|创建方法的比较）</li>
+<li>状态转换</li>
+</ul>
+</li>
+</ul>
+<h2 id="IO-NIO"><a href="#IO-NIO" class="headerlink" title="IO/NIO"></a>IO/NIO</h2><ul>
+<li><strong>七月旅行准备</strong><ul>
+<li>准备邮轮上需要携带的物品</li>
+<li>浏览日本免税店的物品</li>
+<li>购买蓝宝石公主号七月一日的船票</li>
+</ul>
+</li>
+</ul>
 <h3 id="IO模型"><a href="#IO模型" class="headerlink" title="IO模型"></a>IO模型</h3><p><code>阻塞模型</code>：用户线程通用调用方法读取数据，如果获取不到数据，则整个用户线程都被阻塞掉，直到获取到数据。<br><code>非阻塞模型</code>：获取不到数据时，用户线程不会被阻塞掉，而是会不断的询问数据是否达到，占用CPU资源。<br><code>多路IO复用模型</code>：<br><code>信号驱动模型</code>：<br><code>异步IO模型</code>：</p>
-<h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><h2 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h2>
+<h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><blockquote>
+<ul>
+<li>整理知识，学习笔记</li>
+<li>发布日记，杂文，所见所想</li>
+<li>撰写发布技术文稿（代码支持）</li>
+<li>撰写发布学术论文（LaTeX 公式支持）</li>
+</ul>
+</blockquote>
+<h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><h2 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h2>
       
 
       
