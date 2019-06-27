@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="QIN">
 <meta property="og:description" content="经济基础决定上层建筑，打好基础，我们才能走得更远。以下是JAVA基础知识的总结，从概念的层面进行了讲述。我们为什么常常会觉得难呢？有很多时候是因为我们不解其意，一些专业的术语加深了我们理解的难度。理解了，才能记忆得更多。有一种方法可以检测我们是否正真的理解，那就是向别人讲述，这也就是费曼学习法。还有你应该经常巩固，去复习，找到适合自己的学习方法，制定合理的目标。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-27T07:06:44.996Z">
+<meta property="og:updated_time" content="2019-06-27T09:00:20.383Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java基础知识总结">
 <meta name="twitter:description" content="经济基础决定上层建筑，打好基础，我们才能走得更远。以下是JAVA基础知识的总结，从概念的层面进行了讲述。我们为什么常常会觉得难呢？有很多时候是因为我们不解其意，一些专业的术语加深了我们理解的难度。理解了，才能记忆得更多。有一种方法可以检测我们是否正真的理解，那就是向别人讲述，这也就是费曼学习法。还有你应该经常巩固，去复习，找到适合自己的学习方法，制定合理的目标。">
@@ -405,7 +405,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-06-27 15:06:44" itemprop="dateModified" datetime="2019-06-27T15:06:44+08:00">2019-06-27</time>
+                <time title="Modified: 2019-06-27 17:00:20" itemprop="dateModified" datetime="2019-06-27T17:00:20+08:00">2019-06-27</time>
               
             
           </span>
@@ -473,7 +473,8 @@
 </li>
 </ul>
 </blockquote>
-<h2 id="异常分裂及处理"><a href="#异常分裂及处理" class="headerlink" title="异常分裂及处理"></a>异常分裂及处理</h2><blockquote>
+<h2 id="异常分类及处理"><a href="#异常分类及处理" class="headerlink" title="异常分类及处理"></a>异常分类及处理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">程序出现意外状况导致执行问题，产生时我们必须进行处理，或者将其抛出（让别人知道程序出现了异常），产生的原因：一种是可预测的，那么必须进行强制处理，一种是在运行时才可以发现的，还有一种是来自底层运行环境的错误。</span><br></pre></td></tr></table></figure>
+<blockquote>
 <ul>
 <li><strong>概念</strong><ul>
 <li>某个方法不能正常执行，则可以通过另一种路径退出。</li>
@@ -494,7 +495,8 @@
 </li>
 </ul>
 </blockquote>
-<h2 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a>网络编程</h2><h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><h2 id="IO-NIO"><a href="#IO-NIO" class="headerlink" title="IO/NIO"></a>IO/NIO</h2><ul>
+<h2 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a>网络编程</h2><h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><h2 id="IO-NIO"><a href="#IO-NIO" class="headerlink" title="IO/NIO"></a>IO/NIO</h2><blockquote>
+<ul>
 <li><strong>IO模型</strong><ul>
 <li>阻塞模型：用户线程通用调用方法读取数据，如果获取不到数据，则整个用户线程都被阻塞掉，直到获取到数据。</li>
 <li>非阻塞模型：获取不到数据时，用户线程不会被阻塞掉，而是会不断的询问数据是否达到，占用CPU资源。</li>
@@ -504,7 +506,33 @@
 </ul>
 </li>
 </ul>
-<h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><h2 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h2>
+</blockquote>
+<h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">总的来说就是可以到获取类的全部信息（问题是如何获取？在实际当中的应用场景）</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><strong>概念 </strong><ul>
+<li>动态语言：在运行时可以动态地改变其结构。</li>
+<li>反射的含义：在运行时可以获取到类和对象的所有属性、方法、构造函数。</li>
+</ul>
+</li>
+<li><strong>应用场景</strong><ul>
+<li>编译是没办法获取到对象的真实类型（比如向上转型），只有在运行时才能得到对象的具体类型，</li>
+<li>运行时动态加载外部的类，这时需要用到反射的机制，获取类的属性和方法。</li>
+</ul>
+</li>
+<li><strong>反射API</strong><ul>
+<li>4个类（Class、Field、Method、Constructor）</li>
+</ul>
+</li>
+<li><strong>使用</strong><ul>
+<li>获取Class对象，本质（编译后的字节码）（获取方法：通过对象（getClass()方法）,类（class属性），Class类的静态方法forName(“全类名”)）</li>
+<li>获取属性、方法、构造函数（getDeclaredMethods\Field\Contructor）</li>
+<li>创建对象（Class对象和Constructor对象的newInstance()方法）</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><h2 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h2>
       
     </div>
 
@@ -736,7 +764,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程"><span class="nav-number">1.</span> <span class="nav-text">多线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异常分裂及处理"><span class="nav-number">2.</span> <span class="nav-text">异常分裂及处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络编程"><span class="nav-number">3.</span> <span class="nav-text">网络编程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合"><span class="nav-number">4.</span> <span class="nav-text">集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO-NIO"><span class="nav-number">5.</span> <span class="nav-text">IO/NIO</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注解"><span class="nav-number">6.</span> <span class="nav-text">注解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反射"><span class="nav-number">7.</span> <span class="nav-text">反射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#泛型"><span class="nav-number">8.</span> <span class="nav-text">泛型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#序列化"><span class="nav-number">9.</span> <span class="nav-text">序列化</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程"><span class="nav-number">1.</span> <span class="nav-text">多线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异常分类及处理"><span class="nav-number">2.</span> <span class="nav-text">异常分类及处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络编程"><span class="nav-number">3.</span> <span class="nav-text">网络编程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合"><span class="nav-number">4.</span> <span class="nav-text">集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO-NIO"><span class="nav-number">5.</span> <span class="nav-text">IO/NIO</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注解"><span class="nav-number">6.</span> <span class="nav-text">注解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反射"><span class="nav-number">7.</span> <span class="nav-text">反射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#泛型"><span class="nav-number">8.</span> <span class="nav-text">泛型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#序列化"><span class="nav-number">9.</span> <span class="nav-text">序列化</span></a></li></ol></div>
             
 
           </div>
