@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="QIN">
 <meta property="og:description" content="经济基础决定上层建筑，打好基础，我们才能走得更远。以下是JAVA基础知识的总结，从概念的层面进行了讲述。我们为什么常常会觉得难呢？有很多时候是因为我们不解其意，一些专业的术语加深了我们理解的难度。理解了，才能记忆得更多。有一种方法可以检测我们是否正真的理解，那就是向别人讲述，这也就是费曼学习法。还有你应该经常巩固，去复习，找到适合自己的学习方法，制定合理的目标。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-27T09:07:04.259Z">
+<meta property="og:updated_time" content="2019-06-29T06:38:55.518Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java基础知识总结">
 <meta name="twitter:description" content="经济基础决定上层建筑，打好基础，我们才能走得更远。以下是JAVA基础知识的总结，从概念的层面进行了讲述。我们为什么常常会觉得难呢？有很多时候是因为我们不解其意，一些专业的术语加深了我们理解的难度。理解了，才能记忆得更多。有一种方法可以检测我们是否正真的理解，那就是向别人讲述，这也就是费曼学习法。还有你应该经常巩固，去复习，找到适合自己的学习方法，制定合理的目标。">
@@ -405,7 +405,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-06-27 17:07:04" itemprop="dateModified" datetime="2019-06-27T17:07:04+08:00">2019-06-27</time>
+                <time title="Modified: 2019-06-29 14:38:55" itemprop="dateModified" datetime="2019-06-29T14:38:55+08:00">2019-06-29</time>
               
             
           </span>
@@ -510,7 +510,24 @@
 <h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><blockquote>
 <ul>
 <li><strong>概念</strong><ul>
-<li>可以把注解理解为代码里的特殊标记，这些标记可以在编译，类加载，运行时被读取，并执行相应的处理。</li>
+<li>可以把注解理解为代码里的特殊标记，这些标记可以在编译，类加载，运行时被读取，并执行相应的处理。Annotation是接口，程序可通过Annotation对象获取到注解当中的元数据信息。</li>
+<li>元程序：描述程序的程序，元数据：关于数据的数据。（描述数据的数据）</li>
+</ul>
+</li>
+<li><strong>元注解（4种 用于自定义注解）</strong><ul>
+<li>修饰的对象范围（@Target） 类型成员（方法、构造函数、成员变量） 类 </li>
+<li>定义被保留的时间长短（@Retention） （source\class\runtime）</li>
+<li>文档化（@Documented）</li>
+<li>@Inherited（用该元注解修饰的注解被用于一个class,则注解也被用于该class子类）</li>
+</ul>
+</li>
+<li><strong>java提供的标准的注解</strong><ul>
+<li>@Override @Deprecated</li>
+</ul>
+</li>
+<li><strong>注解处理器</strong><ul>
+<li>作用：读取注解。</li>
+<li>步骤：1.自定义注解 2.使用注解 3.通过注解处理器获取信息（通过反射获取要处理的注解、处理注解）</li>
 </ul>
 </li>
 </ul>
@@ -655,7 +672,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -678,7 +695,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -697,7 +718,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">tags</span>
                   
                 </div>
