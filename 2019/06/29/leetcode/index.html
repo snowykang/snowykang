@@ -102,7 +102,7 @@
 <meta property="og:url" content="http://yoursite.com/2019/06/29/leetcode/index.html">
 <meta property="og:site_name" content="QIN">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-29T04:35:54.663Z">
+<meta property="og:updated_time" content="2019-07-01T07:47:52.324Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetcode">
 
@@ -368,12 +368,24 @@
                 
               
 
-              <time title="Created: 2019-06-29 11:14:52 / Modified: 12:35:54" itemprop="dateCreated datePublished" datetime="2019-06-29T11:14:52+08:00">2019-06-29</time>
+              <time title="Created: 2019-06-29 11:14:52" itemprop="dateCreated datePublished" datetime="2019-06-29T11:14:52+08:00">2019-06-29</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-07-01 15:47:52" itemprop="dateModified" datetime="2019-07-01T15:47:52+08:00">2019-07-01</time>
               
             
           </span>
@@ -440,6 +452,19 @@
 </li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int pathSum(TreeNode* root, int sum) &#123; //遍历每个结点，每个结点都作为根计算路径</span><br><span class="line">        if (root == NULL) return 0;</span><br><span class="line">        return helper(root, sum) + pathSum(root -&gt; left, sum) + pathSum(root -&gt; right, sum);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    int helper(TreeNode* root, int sum) &#123; //以root为根作为一条路径，计算该路径上符合条件的数目</span><br><span class="line">        if (root == NULL) return 0;</span><br><span class="line">        sum -= root -&gt; val; //sum为0的情况下即是符合路径</span><br><span class="line">        return (sum == 0 ? 1 : 0) + helper(root -&gt; left, sum) + helper(root -&gt; right, sum);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ol start="112">
+<li>path sum<blockquote>
+<ul>
+<li>从根结点开始-&gt;到叶子结点结束 </li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public boolean hasPathSum(TreeNode root, int sum) &#123;</span><br><span class="line">        if (root == null)</span><br><span class="line">            return false;</span><br><span class="line">        sum -= root.val;</span><br><span class="line">        if (root.right == null &amp;&amp; root.left == null) return sum == 0; //判断最后路径和是否为零。</span><br><span class="line">        return hasPathSum(root.left, sum) || hasPathSum(root.right, sum);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="113">
+<li>Path Sum II<br>理解DFS的运行流程，在回溯时将list当中的值进行删除。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public List&lt;List&lt;Integer&gt;&gt; pathSum(TreeNode root, int sum) &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; res = new ArrayList&lt;&gt;();</span><br><span class="line">        helper(res,new ArrayList&lt;&gt;(),root,sum);</span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void helper(List&lt;List&lt;Integer&gt;&gt; res, List&lt;Integer&gt; list, TreeNode root, int sum) &#123;</span><br><span class="line">        if (root == null) return;</span><br><span class="line">        list.add(root.val);</span><br><span class="line">        if (root.left == null &amp;&amp; root.right == null &amp;&amp; root.val == sum) &#123;</span><br><span class="line">            res.add(new ArrayList&lt;&gt;(list));</span><br><span class="line">        &#125;</span><br><span class="line">        helper(res,list,root.left,sum-root.val);</span><br><span class="line">        helper(res,list,root.right,sum-root.val);</span><br><span class="line">        list.remove(list.size()-1); //进行回溯。</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+
       
     </div>
 
