@@ -102,7 +102,7 @@
 <meta property="og:url" content="http://yoursite.com/2019/06/29/leetcode/index.html">
 <meta property="og:site_name" content="QIN">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-03T08:40:48.547Z">
+<meta property="og:updated_time" content="2019-07-11T06:45:32.745Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetcode">
 
@@ -385,7 +385,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-07-03 16:40:48" itemprop="dateModified" datetime="2019-07-03T16:40:48+08:00">2019-07-03</time>
+                <time title="Modified: 2019-07-11 14:45:32" itemprop="dateModified" datetime="2019-07-11T14:45:32+08:00">2019-07-11</time>
               
             
           </span>
@@ -478,7 +478,15 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public List&lt;List&lt;Integer&gt;&gt; levelOrder(TreeNode root) &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; res = new ArrayList&lt;&gt;();</span><br><span class="line">        dfs(root,0,res);</span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void dfs(TreeNode root, int depth, List&lt;List&lt;Integer&gt;&gt; res) &#123;</span><br><span class="line">        if (root != null) &#123;</span><br><span class="line">            if (res.size() &lt; depth + 1) &#123;</span><br><span class="line">                res.add(depth, new ArrayList&lt;Integer&gt;());</span><br><span class="line">            &#125;</span><br><span class="line">            res.get(depth).add(root.val);</span><br><span class="line">            depth++;</span><br><span class="line">            if(root.left!=null) dfs(root.left,depth,res);</span><br><span class="line">            if(root.right!=null) dfs(root.right,depth,res);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Average of Levels in Binary Tree</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public List&lt;Double&gt; averageOfLevels(TreeNode root) &#123;</span><br><span class="line">        List&lt;Double&gt; res = new LinkedList&lt;&gt;();</span><br><span class="line">        if (root == null) return res;</span><br><span class="line">        Queue&lt;TreeNode&gt; queue = new LinkedList&lt;&gt;();</span><br><span class="line">        queue.add(root);</span><br><span class="line">        while (!queue.isEmpty()) &#123;</span><br><span class="line">            int size = queue.size();</span><br><span class="line">            double sum = 0;</span><br><span class="line">            for (int i = size; i &gt; 0; i--) &#123;</span><br><span class="line">                TreeNode node = queue.poll();</span><br><span class="line">                if (node != null) sum += node.val;</span><br><span class="line">                if (node.left != null) queue.add(node.left);</span><br><span class="line">                if (node.right != null) queue.add(node.right);</span><br><span class="line">            &#125;</span><br><span class="line">            res.add(sum / size);</span><br><span class="line">        &#125;</span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public List&lt;Double&gt; averageOfLevels(TreeNode root) &#123;</span><br><span class="line">        List&lt;Double&gt; res = new LinkedList&lt;&gt;();</span><br><span class="line">        if (root == null) return res;</span><br><span class="line">        Queue&lt;TreeNode&gt; queue = new LinkedList&lt;&gt;();</span><br><span class="line">        queue.add(root);</span><br><span class="line">        while (!queue.isEmpty()) &#123;</span><br><span class="line">            int size = queue.size();</span><br><span class="line">            double sum = 0;</span><br><span class="line">            for (int i = size; i &gt; 0; i--) &#123;</span><br><span class="line">                TreeNode node = queue.poll();</span><br><span class="line">                if (node != null) sum += node.val;</span><br><span class="line">                if (node.left != null) queue.add(node.left);</span><br><span class="line">                if (node.right != null) queue.add(node.right);</span><br><span class="line">            &#125;</span><br><span class="line">            res.add(sum / size);</span><br><span class="line">        &#125;</span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Same Tree</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public boolean isSameTree(TreeNode p, TreeNode q) &#123;</span><br><span class="line">        if (p == null &amp;&amp; q == null) return true;</span><br><span class="line">        if (p == null || q == null) return false;</span><br><span class="line">        if (p.val != q.val) return false;</span><br><span class="line">        return isSameTree(p.left, q.left) &amp;&amp; isSameTree(p.right, q.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="103">
+<li>Binary Tree Zigzag Level Order Traversal<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public List&lt;List&lt;Integer&gt;&gt; zigzagLevelOrder(TreeNode root) &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; res = new ArrayList&lt;&gt;();</span><br><span class="line">        dfs(root, 0, res);</span><br><span class="line">        return res;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void dfs(TreeNode root, int depth, List&lt;List&lt;Integer&gt;&gt; res) &#123;</span><br><span class="line">        if (root != null) &#123;</span><br><span class="line">            if (res.size() &lt; depth + 1) &#123;</span><br><span class="line">                res.add(depth, new ArrayList&lt;Integer&gt;());</span><br><span class="line">            &#125;</span><br><span class="line">            if (depth % 2 == 0) &#123;</span><br><span class="line">                res.get(depth).add(root.val);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                res.get(depth).add(0, root.val);</span><br><span class="line">            &#125;</span><br><span class="line">            depth++;</span><br><span class="line">            if (root.left != null) dfs(root.left, depth, res);</span><br><span class="line">            if (root.right != null) dfs(root.right, depth, res);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 
       
@@ -590,7 +598,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -619,7 +627,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -644,7 +656,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">tags</span>
                   
                 </div>
