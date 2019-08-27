@@ -96,16 +96,14 @@
 
 
 
-  <meta name="description" content="一段时间内，你只能专注一件事。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="QIN">
-<meta property="og:url" content="http://yoursite.com/tags/javaWeb/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="java基础小结">
+<meta property="og:url" content="http://yoursite.com/2019/08/27/java/index.html">
 <meta property="og:site_name" content="QIN">
-<meta property="og:description" content="一段时间内，你只能专注一件事。">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-27T03:36:31.947Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="QIN">
-<meta name="twitter:description" content="一段时间内，你只能专注一件事。">
+<meta name="twitter:title" content="java基础小结">
 
 
 
@@ -113,7 +111,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/tags/javaWeb/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/27/java/">
 
 
 
@@ -123,7 +121,7 @@
   };
 </script>
 
-  <title>Tag: javaWeb | QIN</title>
+  <title>java基础小结 | QIN</title>
   
 
 
@@ -171,7 +169,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -306,80 +304,206 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>javaWeb<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/27/java/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="QIN">
+      <meta itemprop="description" content="一段时间内，你只能专注一件事。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="QIN">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/07/05/javaWeb/" itemprop="url">
-            
-              <span itemprop="name">javaWeb</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">java基础小结
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-05T15:20:56+08:00" content="2019-07-05">
-          07-05
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-08-27 11:36:31" itemprop="dateCreated datePublished" datetime="2019-08-27T11:36:31+08:00">2019-08-27</time>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<a id="more"></a>
+<h2 id="Java动态追踪技术"><a href="#Java动态追踪技术" class="headerlink" title="Java动态追踪技术"></a>Java动态追踪技术</h2><blockquote>
+<p><code>想不重启JVM，偷天换日，替换掉已经加载的类？想不重启JVM，获知运行时对象的属性</code></p>
+</blockquote>
+<p><em>jsp文件处理过程</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1、动态改变内存中已存在对象的行为</span><br><span class="line">2、每个对象的属性都属于对象本身，但是每个对象的行为却是公共的</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Java的对象行为（方法、函数）是存储在方法区的。</span><br><span class="line"></span><br><span class="line">“方法区中的数据从哪来？”</span><br><span class="line"></span><br><span class="line">“方法区中的数据是类加载时从class文件中提取出来的。”</span><br><span class="line"></span><br><span class="line">“class文件从哪来？”</span><br><span class="line"></span><br><span class="line">“从Java或者其他符合JVM规范的源代码中编译而来。”</span><br></pre></td></tr></table></figure>
+<h3 id="java8-新特性"><a href="#java8-新特性" class="headerlink" title="java8 新特性"></a>java8 新特性</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lexicographically  字典序;按字典顺序</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>默认继承Object类</p>
+<ul>
+<li><h5 id="编译器处理（JDK1-6以前）"><a href="#编译器处理（JDK1-6以前）" class="headerlink" title="编译器处理（JDK1.6以前）"></a>编译器处理（JDK1.6以前）</h5></li>
+<li><h5 id="JVM处理-（Jdk1-6以后）"><a href="#JVM处理-（Jdk1-6以后）" class="headerlink" title="JVM处理 （Jdk1.6以后）"></a>JVM处理 （Jdk1.6以后）</h5></li>
+<li><p>javap是JDK自带的反汇编器，可以查看java编译器为我们生成的字节码</p>
+</li>
+</ul>
+</blockquote>
+<p><code>native</code>关键字</p>
+<p>Java平台有个用户和本地C代码进行互操作的API，称为Java Native Interface (Java本地接口)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">被native关键字修饰的方法叫做本地方法，本地方法和其它方法不一样，本地方法意味着和平台有关，因此使用了native的程序可移植性都不太高。另外native方法在JVM中运行时数据区也和其它方法不一样，它有专门的本地方法栈。native方法主要用于加载文件和动态链接库，由于Java语言无法访问操作系统底层信息（比如：底层硬件设备等），这时候就需要借助C语言来完成了。被native修饰的方法可以被C语言重写。</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>匿名内部类</strong></p>
+<ul>
+<li>一个内部类实现了接口里的抽象方法并且返回一个内部类对象</li>
+</ul>
+</blockquote>
+<blockquote>
+<h5 id="函数式接口-Functional-Interfaces"><a href="#函数式接口-Functional-Interfaces" class="headerlink" title="函数式接口(Functional Interfaces)"></a>函数式接口(Functional Interfaces)</h5><ul>
+<li>“函数式接口”是指仅仅只包含一个抽象方法,但是可以有多个非抽象方法(也就是上面提到的默认方法)的接口。</li>
+<li>一般建议在接口上使用<code>@FunctionalInterface</code> 注解进行声明，这样的话，编译器如果发现你标注了这个注解的接口有多于一个抽象方法的时候会报错的</li>
+<li>java.util.function包</li>
+</ul>
+</blockquote>
+<blockquote>
+<h5 id="方法和构造函数引用-Method-and-Constructor-References"><a href="#方法和构造函数引用-Method-and-Constructor-References" class="headerlink" title="方法和构造函数引用(Method and Constructor References)"></a>方法和构造函数引用(Method and Constructor References)</h5><ul>
+<li>通过<code>::</code>关键字传递方法或构造函数的引用</li>
+</ul>
+</blockquote>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/27/RocketMQ笔记/" rel="next" title="消息队列的学习">
+                <i class="fa fa-chevron-left"></i> 消息队列的学习
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -399,8 +523,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -546,6 +679,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java动态追踪技术"><span class="nav-number">1.</span> <span class="nav-text">Java动态追踪技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#java8-新特性"><span class="nav-number">1.1.</span> <span class="nav-text">java8 新特性</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#编译器处理（JDK1-6以前）"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">编译器处理（JDK1.6以前）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#JVM处理-（Jdk1-6以后）"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">JVM处理 （Jdk1.6以后）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#函数式接口-Functional-Interfaces"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">函数式接口(Functional Interfaces)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#方法和构造函数引用-Method-and-Constructor-References"><span class="nav-number">1.1.0.4.</span> <span class="nav-text">方法和构造函数引用(Method and Constructor References)</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -676,6 +826,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
 
   
 
@@ -691,6 +845,8 @@
 
   
 
+
+  
 
 
   
