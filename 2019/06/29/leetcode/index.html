@@ -102,7 +102,7 @@
 <meta property="og:url" content="http://yoursite.com/2019/06/29/leetcode/index.html">
 <meta property="og:site_name" content="QIN">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-09T04:05:46.198Z">
+<meta property="og:updated_time" content="2019-09-09T08:33:24.351Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetcode">
 
@@ -385,7 +385,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-08-09 12:05:46" itemprop="dateModified" datetime="2019-08-09T12:05:46+08:00">2019-08-09</time>
+                <time title="Modified: 2019-09-09 16:33:24" itemprop="dateModified" datetime="2019-09-09T16:33:24+08:00">2019-09-09</time>
               
             
           </span>
@@ -439,6 +439,10 @@
       
         <hr>
 <a id="more"></a>
+<ol start="42">
+<li>Trapping Rain Water<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int trap(int[] height) &#123;</span><br><span class="line">        int sum = 0;</span><br><span class="line">        for (int i = 1; i &lt; height.length; i++) &#123;</span><br><span class="line">            int maxLeft = 0, maxRight = 0;</span><br><span class="line">            for (int j = i; j &gt;= 0; j--) &#123;</span><br><span class="line">                maxLeft = Math.max(maxLeft, height[j]);</span><br><span class="line">            &#125;</span><br><span class="line">            for (int j = i; j &lt; height.length; j++) &#123;</span><br><span class="line">                maxRight = Math.max(maxRight, height[j]);</span><br><span class="line">            &#125;</span><br><span class="line">            sum += Math.min(maxLeft, maxRight) - height[i];</span><br><span class="line">        &#125;</span><br><span class="line">        return sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 <p>数组：</p>
 <ol start="1089">
 <li><p>Duplicate Zeros<br><code>用了最土的办法，直接根据题意</code></p>
@@ -491,8 +495,6 @@
 <li><p>Same Tree</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public boolean isSameTree(TreeNode p, TreeNode q) &#123;</span><br><span class="line">        if (p == null &amp;&amp; q == null) return true;</span><br><span class="line">        if (p == null || q == null) return false;</span><br><span class="line">        if (p.val != q.val) return false;</span><br><span class="line">        return isSameTree(p.left, q.left) &amp;&amp; isSameTree(p.right, q.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<ol start="103">
 <li><p>Binary Tree Zigzag Level Order Traversal</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public List&lt;List&lt;Integer&gt;&gt; zigzagLevelOrder(TreeNode root) &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; res = new ArrayList&lt;&gt;();</span><br><span class="line">        dfs(root, 0, res);</span><br><span class="line">        return res;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void dfs(TreeNode root, int depth, List&lt;List&lt;Integer&gt;&gt; res) &#123;</span><br><span class="line">        if (root != null) &#123;</span><br><span class="line">            if (res.size() &lt; depth + 1) &#123;</span><br><span class="line">                res.add(depth, new ArrayList&lt;Integer&gt;());</span><br><span class="line">            &#125;</span><br><span class="line">            if (depth % 2 == 0) &#123;</span><br><span class="line">                res.get(depth).add(root.val);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                res.get(depth).add(0, root.val);</span><br><span class="line">            &#125;</span><br><span class="line">            depth++;</span><br><span class="line">            if (root.left != null) dfs(root.left, depth, res);</span><br><span class="line">            if (root.right != null) dfs(root.right, depth, res);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
@@ -500,7 +502,17 @@
 </li>
 </ol>
 <p>解法：递归（存在大量的重复计算） 可以采用动态规划（减少大量的重复计算）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int fib(int N) &#123;</span><br><span class="line">        if (N == 0) return 0;</span><br><span class="line">        if (N == 1) return 1;</span><br><span class="line">        return fib(N - 1) + fib(N - 2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
+<h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><p>保存上一次的状态，减少重复的计算。以空间换时间。</p>
+<h4 id="53-Maximum-Subarray"><a href="#53-Maximum-Subarray" class="headerlink" title="53. Maximum Subarray"></a><a href="https://leetcode-cn.com/problems/maximum-subarray/" target="_blank" rel="noopener">53. Maximum Subarray</a></h4><p>将连续的子集的最大值保存在数组当中，当前的状态取决于上一次的状态。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int maxSubArray(int[] nums) &#123;</span><br><span class="line">        int len = nums.length;</span><br><span class="line">        int[] dp = new int[len];</span><br><span class="line">        dp[0] = nums[0];</span><br><span class="line">        int max = dp[0];</span><br><span class="line">        for (int i = 1; i &lt; len; i++) &#123;</span><br><span class="line">            if (dp[i - 1] + nums[i] &gt; nums[i]) &#123;</span><br><span class="line">                dp[i] = dp[i - 1] + nums[i];</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                dp[i] = nums[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        for (int i = 1; i &lt; len; i++) &#123;</span><br><span class="line">            if (max &lt; dp[i]) &#123;</span><br><span class="line">                max = dp[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>也是动态规划的思想，只不过我们直接通过变量保存上一次的状态。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int maxSubArray(int[] nums) &#123;</span><br><span class="line">        int maxSum, sum;</span><br><span class="line">        maxSum = sum = nums[0];</span><br><span class="line">        for (int i = 1; i &lt; nums.length; i++) &#123;</span><br><span class="line">            if (nums[i] + sum &gt; nums[i]) &#123;</span><br><span class="line">                sum = nums[i] + sum;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                sum = nums[i];</span><br><span class="line">            &#125;</span><br><span class="line">            if (maxSum &lt; sum) maxSum = sum;</span><br><span class="line">        &#125;</span><br><span class="line">        return maxSum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="121-Best-Time-to-Buy-and-Sell-Stock"><a href="#121-Best-Time-to-Buy-and-Sell-Stock" class="headerlink" title="121. Best Time to Buy and Sell Stock"></a><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/" target="_blank" rel="noopener">121. Best Time to Buy and Sell Stock</a></h4><blockquote>
+<p>暴力解法，时间o(n^2)</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int maxProfit(int[] prices) &#123;</span><br><span class="line">        int maxProfit = 0;</span><br><span class="line">        for (int i = 0; i &lt; prices.length - 1; i++) &#123;</span><br><span class="line">            for (int j = i + 1; j &lt; prices.length; j++) &#123;</span><br><span class="line">                if (prices[j] - prices[i] &gt; maxProfit) &#123;</span><br><span class="line">                    maxProfit = prices[j] - prices[i];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return maxProfit;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>动态规划，记录买入前股价的最小值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int maxProfit(int[] prices) &#123;</span><br><span class="line">        int minPrice = Integer.MAX_VALUE;</span><br><span class="line">        int maxProfit = 0;</span><br><span class="line">        for (int i = 0; i &lt; prices.length; i++) &#123;</span><br><span class="line">            if (prices[i] &lt; minPrice) &#123;</span><br><span class="line">                minPrice = prices[i];</span><br><span class="line">            &#125;</span><br><span class="line">            if (maxProfit &lt; prices[i] - minPrice) &#123;</span><br><span class="line">                maxProfit = prices[i] - minPrice;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return maxProfit;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -592,8 +604,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -610,7 +631,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -738,6 +759,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#动态规划"><span class="nav-number">1.</span> <span class="nav-text">动态规划</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#53-Maximum-Subarray"><span class="nav-number">1.0.1.</span> <span class="nav-text">53. Maximum Subarray</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#121-Best-Time-to-Buy-and-Sell-Stock"><span class="nav-number">1.0.2.</span> <span class="nav-text">121. Best Time to Buy and Sell Stock</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
