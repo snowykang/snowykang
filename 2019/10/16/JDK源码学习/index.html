@@ -101,15 +101,16 @@
 <meta property="og:url" content="http://yoursite.com/2019/10/16/JDK源码学习/index.html">
 <meta property="og:site_name" content="QIN">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/images/HashMap源码.png">
 <meta property="og:image" content="http://yoursite.com/images/pasted-4.png">
 <meta property="og:image" content="http://yoursite.com/images/pasted-1.png">
 <meta property="og:image" content="http://yoursite.com/images/pasted-0.png">
 <meta property="og:image" content="http://yoursite.com/images/pasted-2.png">
 <meta property="og:image" content="http://yoursite.com/images/pasted-3.png">
-<meta property="og:updated_time" content="2019-10-17T08:27:55.632Z">
+<meta property="og:updated_time" content="2019-10-22T10:54:10.234Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JDK源码学习">
-<meta name="twitter:image" content="http://yoursite.com/images/pasted-4.png">
+<meta name="twitter:image" content="http://yoursite.com/images/HashMap源码.png">
 
 
 
@@ -390,7 +391,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-10-17 16:27:55" itemprop="dateModified" datetime="2019-10-17T16:27:55+08:00">2019-10-17</time>
+                <time title="Modified: 2019-10-22 18:54:10" itemprop="dateModified" datetime="2019-10-22T18:54:10+08:00">2019-10-22</time>
               
             
           </span>
@@ -426,12 +427,13 @@
       
         <hr>
 <a id="more"></a>
-<h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><h3 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h3><h4 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h4><p>数据结构：数组+链表 <img src="\images\pasted-4.png" alt="upload successful"></p>
+<h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><h3 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h3><p><img src="\images\HashMap源码.png" alt="思维导图"></p>
+<h4 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h4><p>数据结构：数组+链表 <img src="\images\pasted-4.png" alt="upload successful"></p>
 <h4 id="主要的知识点梳理"><a href="#主要的知识点梳理" class="headerlink" title="主要的知识点梳理"></a>主要的知识点梳理</h4><p>1、内部类的使用 2、final、transien关键字 3、泛型 4、设计和组织理念 5、Cloneable接口<br>6、数据的组织与操作</p>
 <h4 id="源码细节"><a href="#源码细节" class="headerlink" title="源码细节"></a>源码细节</h4><p><img src="\images\pasted-1.png" alt="upload successful"><br>可以看到HashMap类继承了抽象类并且实现了接口，抽象类把接口的大部分骨架都实现了。</p>
 <p><img src="\images\pasted-0.png" alt="upload successful"><br>实现序列化接口，序列化接口只是一个序列话标值，我们可以看到接口当中什么抽象方法都没有。</p>
 <p><img src="\images\pasted-2.png" alt="upload successful"><br>默认设置初始化容量的大小为16，设置为final，表示不可修改。设置为static静态类型，所以后面的代码可以直接访问到这个常量。</p>
-<p><img src="\images\pasted-3.png" alt="upload successful"><br>实现了内部接口的内部静态类。    </p>
+<p><img src="\images\pasted-3.png" alt="upload successful"><br>实现了内部接口的内部静态类。</p>
 
       
     </div>
