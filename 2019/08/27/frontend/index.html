@@ -101,7 +101,7 @@
 <meta property="og:url" content="http://yoursite.com/2019/08/27/frontend/index.html">
 <meta property="og:site_name" content="QIN">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-27T03:27:11.190Z">
+<meta property="og:updated_time" content="2019-10-24T12:51:18.019Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端学习小结">
 
@@ -367,12 +367,24 @@
                 
               
 
-              <time title="Created: 2019-08-27 11:25:52 / Modified: 11:27:11" itemprop="dateCreated datePublished" datetime="2019-08-27T11:25:52+08:00">2019-08-27</time>
+              <time title="Created: 2019-08-27 11:25:52" itemprop="dateCreated datePublished" datetime="2019-08-27T11:25:52+08:00">2019-08-27</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-10-24 20:51:18" itemprop="dateModified" datetime="2019-10-24T20:51:18+08:00">2019-10-24</time>
               
             
           </span>
@@ -408,6 +420,7 @@
       
         <hr>
 <a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">$.extend($.fn.treegrid.methods, &#123;</span><br><span class="line">    checkNode: function (target, param) &#123;</span><br><span class="line">        var opts = $.data(target[0], &quot;treegrid&quot;).options;</span><br><span class="line">        var idField = opts.idField;//这里的idField其实就是API里方法的id参数</span><br><span class="line">        param.row[&apos;checkState&apos;] = true;</span><br><span class="line">        param.nodes.push(param.row.id);</span><br><span class="line">        var checkedNodes = $(target).treegrid(&apos;getChecked&apos;);//获取当前选中项</span><br><span class="line">        for (var i = 0; i &lt; checkedNodes.length; i++) &#123;</span><br><span class="line">            if (checkedNodes[i][idField] == param.nodes[0]) &#123;</span><br><span class="line">                checkParent(target[0], param.nodes[0], idField);</span><br><span class="line">                checkChildren(target[0], param.nodes[0], idField);</span><br><span class="line">                nodes = []</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        function checkParent(target, id, idField) &#123;</span><br><span class="line">            var parent = $(target).treegrid(&apos;getParent&apos;, id);</span><br><span class="line">            if (parent) &#123;</span><br><span class="line">                var parentId = parent[idField];</span><br><span class="line">                if (parent[&apos;checkState&apos;] == undefined) &#123;</span><br><span class="line">                    $(target).treegrid(&apos;checkRow&apos;, parentId);</span><br><span class="line">                    parent[&apos;checkState&apos;] = true;</span><br><span class="line">                &#125;</span><br><span class="line">                checkParent(target, parentId, idField);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        function checkChildren(target, id, idField) &#123;</span><br><span class="line">            var children = $(target).treegrid(&apos;getChildren&apos;, id);</span><br><span class="line">            for (var i = 0; i &lt; children.length; i++) &#123;</span><br><span class="line">                var childId = children[i][idField];</span><br><span class="line">                if (children[i][&apos;checkState&apos;] == undefined) &#123;</span><br><span class="line">                    $(target).treegrid(&apos;checkRow&apos;, childId);</span><br><span class="line">                    children[i][&apos;checkState&apos;] = true;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    unckeckNode: function (target, param) &#123;</span><br><span class="line">        var opts = $.data(target[0], &quot;treegrid&quot;).options;</span><br><span class="line">        var idField = opts.idField;//这里的idField其实就是API里方法的id参数</span><br><span class="line">        param.row[&apos;checkState&apos;] = undefined;</span><br><span class="line">        param.nodes.push(param.row.id);</span><br><span class="line">        var children = $(target).treegrid(&apos;getChildren&apos;, param.nodes[0]);</span><br><span class="line">        if (children != null) &#123;</span><br><span class="line">            for (var i in children) &#123;</span><br><span class="line">                if (children[i].checkState) &#123;</span><br><span class="line">                    $(target).treegrid(&apos;uncheckRow&apos;, children[i].id)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        unCheckParent(target, param.nodes[0])</span><br><span class="line">        uncheckNode = []</span><br><span class="line"></span><br><span class="line">        function unCheckParent(target, id) &#123;</span><br><span class="line">            var parent = $(target).treegrid(&apos;getParent&apos;, id);</span><br><span class="line">            if (parent != null) &#123;</span><br><span class="line">                var count = 0;</span><br><span class="line">                for (var i in parent.children) &#123;</span><br><span class="line">                    if (parent.children[i].checkState) &#123;</span><br><span class="line">                        count++;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                if (!count &amp;&amp; parent.checkState) &#123;</span><br><span class="line">                    $(target).treegrid(&apos;uncheckRow&apos;, parent.id)</span><br><span class="line">                    unCheckParent(target, parent.id)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <h2 id="Axios-http库"><a href="#Axios-http库" class="headerlink" title="Axios(http库)"></a>Axios(http库)</h2><p>Axios 是一个基于 <code>promise</code>(?) 的 <strong>HTTP 库 </strong>，可以用在浏览器和 node.js 中。</p>
 <blockquote>
 <ul>
@@ -560,7 +573,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
