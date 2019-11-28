@@ -101,7 +101,7 @@
 <meta property="og:url" content="http://yoursite.com/2019/11/25/ArrayList源码阅读/index.html">
 <meta property="og:site_name" content="QIN">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-25T07:58:28.622Z">
+<meta property="og:updated_time" content="2019-11-25T08:03:22.011Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ArrayList源码阅读">
 
@@ -367,7 +367,7 @@
                 
               
 
-              <time title="Created: 2019-11-25 11:39:00 / Modified: 15:58:28" itemprop="dateCreated datePublished" datetime="2019-11-25T11:39:00+08:00">2019-11-25</time>
+              <time title="Created: 2019-11-25 11:39:00 / Modified: 16:03:22" itemprop="dateCreated datePublished" datetime="2019-11-25T11:39:00+08:00">2019-11-25</time>
             
 
             
@@ -428,7 +428,7 @@
 <a id="more"></a>
 <p>在JDK当中，容器(Collection)的设计思想很值得我们的借鉴。首先是行为的抽象(接口)，容器都具有添加、删除、遍历元素等功能，然后进一步实现一些抽象类(对某一类型容器的抽象)，最后才是具体的实现。</p>
 <h3 id="功能概要"><a href="#功能概要" class="headerlink" title="功能概要"></a>功能概要</h3><p>ArrayList的底层是Object数组，具有自动扩容机制（在C++当中相当于vector），因为底层是数组，所以具有数组的随机存储的特性。ArrayList是非线程安全的。</p>
-<h3 id="扩容机制"><a href="#扩容机制" class="headerlink" title="扩容机制"></a>扩容机制</h3><p>在添加元素的方法执行的时候，首先会对容量进行检测(<code>ensureCapacityInternal(int minCapacity)</code>),首次往对象当中添加元素，如果是通过无参构造函数构造出来的对象，则在添加元素的时候设置object数组的容量为默认大小10；否则</p>
+<h3 id="扩容机制"><a href="#扩容机制" class="headerlink" title="扩容机制"></a>扩容机制</h3><p>在添加元素的方法执行的时候，首先会对容量进行检测(<code>ensureCapacityInternal(int minCapacity)</code>),首次往对象当中添加元素，如果是通过无参构造函数构造出来的对象，则在添加元素的时候设置object数组的容量为默认大小10；如果是带参构造函数构造出来的对象(初始化时已将object的数组的大小设置为入参的大小)，</p>
 
       
     </div>
@@ -468,6 +468,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/28/末总结/" rel="prev" title="月末总结">
+                月末总结 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -538,7 +542,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
