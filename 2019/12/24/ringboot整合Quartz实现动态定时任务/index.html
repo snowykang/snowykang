@@ -96,15 +96,14 @@
 
 
 
-  <meta name="keywords" content="设计模式">
-<meta property="og:type" content="article">
-<meta property="og:title" content="设计模式">
-<meta property="og:url" content="http://yoursite.com/2019/06/12/设计模式/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="每天一个小知识点">
+<meta property="og:url" content="http://yoursite.com/2019/12/24/ringboot整合Quartz实现动态定时任务/index.html">
 <meta property="og:site_name" content="QIN">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-24T03:54:55.521Z">
+<meta property="og:updated_time" content="2020-01-15T07:09:38.326Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="设计模式">
+<meta name="twitter:title" content="每天一个小知识点">
 
 
 
@@ -112,7 +111,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/06/12/设计模式/">
+  <link rel="canonical" href="http://yoursite.com/2019/12/24/ringboot整合Quartz实现动态定时任务/">
 
 
 
@@ -122,7 +121,7 @@
   };
 </script>
 
-  <title>设计模式 | QIN</title>
+  <title>每天一个小知识点 | QIN</title>
   
 
 
@@ -325,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/12/设计模式/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/24/ringboot整合Quartz实现动态定时任务/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="QIN">
@@ -342,7 +341,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">设计模式
+          <h1 class="post-title" itemprop="name headline">每天一个小知识点
 
               
             
@@ -368,7 +367,7 @@
                 
               
 
-              <time title="Created: 2019-06-12 15:50:56" itemprop="dateCreated datePublished" datetime="2019-06-12T15:50:56+08:00">2019-06-12</time>
+              <time title="Created: 2019-12-24 11:48:00" itemprop="dateCreated datePublished" datetime="2019-12-24T11:48:00+08:00">2019-12-24</time>
             
 
             
@@ -385,29 +384,11 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-12-24 11:54:55" itemprop="dateModified" datetime="2019-12-24T11:54:55+08:00">2019-12-24</time>
+                <time title="Modified: 2020-01-15 15:09:38" itemprop="dateModified" datetime="2020-01-15T15:09:38+08:00">2020-01-15</time>
               
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/设计模式/" itemprop="url" rel="index"><span itemprop="name">设计模式</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -439,10 +420,7 @@
       
         <hr>
 <a id="more"></a>
-<h2 id="建造者模式"><a href="#建造者模式" class="headerlink" title="建造者模式"></a>建造者模式</h2><blockquote>
-<p>使用多个简单的对象一步一步构建成一个复杂的对象,将一个复杂的<strong>构建</strong>与其<strong>表示</strong>相分离,一些基本部件不会变，而其组合经常变化的时候</p>
-</blockquote>
-
+<h2 id="编译器API"><a href="#编译器API" class="headerlink" title="编译器API"></a>编译器API</h2><h2 id="jar文件"><a href="#jar文件" class="headerlink" title="jar文件"></a>jar文件</h2>
       
     </div>
 
@@ -463,12 +441,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/设计模式/" rel="tag"># 设计模式</a>
-          
-        </div>
-      
 
       
       
@@ -478,8 +450,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/12/new-draft/" rel="next" title="阅读小集">
-                <i class="fa fa-chevron-left"></i> 阅读小集
+              <a href="/2019/12/13/Swagger/" rel="next" title="API文档">
+                <i class="fa fa-chevron-left"></i> API文档
               </a>
             
           </div>
@@ -487,10 +459,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/27/FrameWork/" rel="prev" title="框架学习">
-                框架学习 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -702,7 +670,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#建造者模式"><span class="nav-number">1.</span> <span class="nav-text">建造者模式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#编译器API"><span class="nav-number">1.</span> <span class="nav-text">编译器API</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jar文件"><span class="nav-number">2.</span> <span class="nav-text">jar文件</span></a></li></ol></div>
             
 
           </div>
